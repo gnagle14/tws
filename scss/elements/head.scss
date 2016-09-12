@@ -6,6 +6,11 @@
   height: 70px;
   background-color: #fff;
   z-index: 666;
+  border-bottom: 1px solid $black1;
+  transform: translateZ(0);
+	will-change: transform;
+	transition: transform 333ms;
+  &.slide-up { transform: translateY(-100%); transition: transform 666ms;}
 
   .logo {
     position: absolute;
