@@ -21,7 +21,7 @@ gulp.task('sync', function(){
         browser: "google chrome canary"
     });
 
-    gulp.watch('scss/*.scss', ['sassy']);
+    gulp.watch('./**/*.scss', ['sassy']);
     gulp.watch("*.html").on('change', browserSync.reload);
     gulp.watch("js/*.js").on('change', browserSync.reload);
 });

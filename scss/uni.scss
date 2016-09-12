@@ -1,6 +1,4 @@
-*,
-*:before,
-*:after {
+*, *:before, *:after {
 	box-sizing: border-box;
   	-webkit-box-sizing: border-box;
   	   -moz-box-sizing: border-box;
@@ -28,9 +26,3 @@ a {
 ul    { list-style-type: none; }
 table { border-collapse: collapse;}
 img   { display: block;}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
