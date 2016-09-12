@@ -25,7 +25,7 @@ var
   previousTop = 0,
   currentTop  = 0,
   scrollDelta = 10,
-  scrollOffset = mainHeadHght;
+  scrollOffset = 10;
 
 
 function checkHead(currentTop) {

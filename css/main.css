@@ -4,6 +4,8 @@
  * 2. Correct the line height in all browsers.
  * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
+@import "https://fonts.googleapis.com/css?family=PT+Mono";
+@import "https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700";
 html {
   font-family: sans-serif;
   /* 1 */
@@ -377,7 +379,7 @@ body {
   margin: 0;
   font-size: 100%;
   font-family: arial, sans-serif, Helvetica;
-  background-color: #FDF5E3;
+  background: linear-gradient(to bottom, #fff 10%, #FDF5E3 10%, #FDF5E3 90%, #fff 90%);
   letter-spacing: 0.075rem;
   word-spacing: 0.25rem;
   color: #212121; }
@@ -404,31 +406,89 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;
   background-color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: stretch;
+      align-items: stretch;
   z-index: 666;
-  border-bottom: 1px solid #424242;
   transform: translateZ(0);
   will-change: transform;
-  transition: transform 333ms; }
+  transition: transform 666ms; }
   .head.slide-up {
     transform: translateY(-100%);
-    transition: transform 666ms; }
+    transition: transform 333ms; }
   .head .logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    width: 241px;
     height: 30px;
-    width: 323px;
-    background-color: #bdbdbd; }
+    margin: 20px 0 20px 20px; }
+    .head .logo img {
+      height: 30px;
+      width: auto; }
+  .head .mainNav {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    margin: 24px 0px 0px 0px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end; }
+    .head .mainNav ul {
+      height: 36px;
+      display: -ms-flexbox;
+      display: flex;
+      background-color: #FDF5E3; }
+    .head .mainNav li {
+      position: relative;
+      padding: 10px 20px;
+      background-color: #fff;
+      font-family: "Ubuntu Mono", monospace;
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(66, 66, 66, 0.4);
+      letter-spacing: 0.2rem;
+      transition: color 161ms ease-in; }
+      .head .mainNav li:before, .head .mainNav li:after {
+        content: '';
+        position: absolute;
+        background-color: #d1ad33;
+        bottom: 5px;
+        transform: translateX(-9px) translateY(-7px);
+        opacity: 0;
+        transition: transform 161ms ease-in-out, opacity 133ms ease-in-out; }
+      .head .mainNav li:before {
+        right: 15px;
+        height: 12px;
+        width: 3px; }
+      .head .mainNav li:after {
+        right: 15px;
+        width: 12px;
+        height: 3px; }
+      .head .mainNav li:hover {
+        cursor: pointer;
+        color: #424242;
+        transition: color 161ms ease-out; }
+        .head .mainNav li:hover:before, .head .mainNav li:hover:after {
+          transform: translateX(0) translateY(3px);
+          opacity: 1;
+          transition: transform 333ms ease-in-out, opacity 233ms ease-in-out 100ms; }
+  .head .twoNav {
+    width: 100px;
+    height: 30px;
+    margin: 20px 20px 10px 0;
+    background-color: #eeeeee; }
 
 .content {
   position: relative;
   margin-top: 70px;
-  background-color: #fff;
-  padding: 0px 20px; }
+  background-color: #fff; }
 
 .filler {
+  margin: 0 20px;
   height: 400px;
   background-color: #616161;
   margin-bottom: 20px; }
@@ -436,8 +496,14 @@ img {
     margin-top: 20px; }
 
 .mainFeatured {
-  width: 100%;
-  background-color: #d1ad33; }
+  margin: 0 20px;
+  width: calc(100% - 40px);
+  height: 666px;
+  background-color: #fff;
+  background-image: url("../assets/images/weather_predictions.jpg");
+  background-position: top right;
+  background-size: cover;
+  overflow: hidden; }
   .mainFeatured img {
     width: 100%;
     height: auto; }

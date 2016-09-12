@@ -8,10 +8,15 @@ body {
 	margin: 0;
 	font-size: 100%;
 	font-family: arial, sans-serif, Helvetica;
-	background-color: $mainBg;
+	// background-color: $mainBg;
+	background: linear-gradient(
+	  to bottom,
+	  #fff 10%, $mainBg 10%,
+		$mainBg 90%,  #fff 90%
+	);
 	letter-spacing: 0.075rem;
 	word-spacing: 0.25rem;
-	color: $black; }
+	color: $black;}
 
 h1, h2, h3, h4, h5, h6, p, ul {
 	margin: 0;

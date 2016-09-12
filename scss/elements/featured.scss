@@ -1,6 +1,14 @@
 .mainFeatured {
-  width: 100%;
-  background-color: $gold;
+  margin: 0 20px;
+  width: calc(100% - 40px);
+  height: 666px;
+  background-color: #fff;
+  background: {
+    image: url('../assets/images/weather_predictions.jpg');
+    position: top right;
+    size: cover;
+  };
+  overflow: hidden;
   img {
     width: 100%;
     height: auto;
